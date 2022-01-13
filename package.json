@@ -1,0 +1,44 @@
+{
+  "name": "dml",
+  "version": "1.0.0",
+  "description": "dml",
+  "main": "index.js",
+  "scripts": {
+    "demo:react": "cd packages/demo && pnpm run dev",
+    "prebuild": "rimraf packages/dml-react/lib/*",
+    "build": "cross-env NODE_ENV=production rollup -c scripts/rollup-react.config.js",
+    "build:tsc-lib": " tsc --emitDeclarationOnly -d -p packages/dml-react/tsconfig.json",
+    "preinstall": "node ./scripts/preinstall.js",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.1.2",
+    "@rollup/plugin-replace": "^3.0.1",
+    "@rollup/plugin-url": "^6.1.0",
+    "@types/rimraf": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.14.10",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.5",
+    "prettier": "2.5.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.63.0",
+    "rollup-plugin-esbuild": "^4.8.2",
+    "rollup-plugin-ignore-import": "^1.3.2",
+    "rollup-plugin-multi-input": "^1.3.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-pluginutils": "^2.8.2",
+    "typescript": "^4.5.4"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

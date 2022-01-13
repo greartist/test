@@ -1,0 +1,17 @@
+{
+  "name": "@s9g/dml-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "components/index.ts",
+  "dependencies": {
+    "@s9g/dml-style": "workspace:^1.0.0",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "eslint-plugin-react": "^7.28.0"
+  }
+}
